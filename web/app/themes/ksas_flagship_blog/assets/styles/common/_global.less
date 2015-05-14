@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'quadon';
+  src: url('../fonts/quadon/Quadon-Medium.eot');
+  src: url('../fonts/quadon/Quadon-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/quadon/Quadon-Medium.woff') format('woff'),
+       url('../fonts/quadon/Quadon-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'gentona-book';
+  src: url('../fonts/gentona/Gentona-Book.eot');
+  src: url('../fonts/gentona/Gentona-Book.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gentona/Gentona-Book.woff') format('woff'),
+       url('../fonts/gentona/Gentona-Book.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'gentona-light';
+  src: url('../fonts/gentona/Gentona-Light.eot');
+  src: url('../fonts/gentona/Gentona-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gentona/Gentona-Light.woff') format('woff'),
+       url('../fonts/gentona/Gentona-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'flagship-icon';
+  src:url('../fonts/flagship-icon.eot');
+}
+@font-face {
+  font-family: 'flagship-icon';
+  src:url('../fonts/flagship-icon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/flagship-icon.svg#flagship-icon') format('svg'),
+    url('../fonts/flagship-icon.woff') format('woff'),
+    url('../fonts/flagship-icon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'flagship-icon';
+  src:url('../fonts/flagship-icon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/flagship-icon.svg#flagship-icon') format('svg'),
+    url('../fonts/flagship-icon.woff') format('woff'),
+    url('../fonts/flagship-icon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html, body {
+  overflow-x:hidden 
+} 
+
+body {
+  font-family: @font-stack;
+  font-style: normal;
+}
+
+p{
+  font-size: 1em;
+}
+
+h1, h2 {
+  font-family: @font-header;
+}
+
+h3, h4, h5, h6, .semibold {
+  font-family: @font-stack;
+  font-style: normal;
+}
+
+table {
+  thead tr th, tfoot tr td {
+    font-weight: 400;
+  font-style: normal;
+  }
+}
+
+em, i {
+  font-family: @font-stack;
+   font-weight: 300;
+  font-style: italic;
+}
+
+blockquote {
+ font-family: @font-stack;
+   font-weight: 300;
+  font-style: italic;
+  p {
+    font-family: @font-stack;
+   font-weight: 300;
+  font-style: italic;
+  }
+}
+
+.italic {
+  font-family: @font-stack;
+   font-weight: 300;
+  font-style: italic;
+}
+
+strong, b, .bold {
+  font-family: @font-subhead;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.b.em, .strong.em {
+  font-family: @font-stack;
+   font-weight: 300;
+  font-style: italic;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.iconfont {
+  font-family: 'flagship-icon';
+}
+
+input.search-field.form-control {
+    color: @black;
+}

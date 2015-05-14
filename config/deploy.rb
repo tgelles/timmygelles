@@ -1,57 +1,40 @@
-# config valid only for Capistrano 3.1
-lock '3.2.1'
-
-set :application, 'timmygelles.com'
+set :application, 'bedrock'
 set :repo_url, 'git@github.com:tgelles/timmygelles.git'
 
+# Branch options
+# Prompts for the branch name (defaults to current branch)
+#ask :branch, -> { `git rev-parse --abbrev-ref HEAD`.chomp }
+
+# Hardcodes branch to always be master
+# This could be overridden in a stage config file
 set :branch, :master
-# Default branch is :master
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
-set :deploy_to, -> { "bedrock" }
-# Default deploy_to directory is /var/www/my_app
-# set :deploy_to, '/var/www/my_app'
+set :deploy_to, -> { "~/public_html/#{fetch(:application)}" }
 
-# Default value for :scm is :git
-# set :scm, :git
-
-# Default value for :format is :pretty
-# set :format, :pretty
-
-# Default value for :log_level is :debug
+# Use :debug for more verbose output when troubleshooting
 set :log_level, :debug
-
-# Default value for :pty is false
-# set :pty, true
-
-# Default value for :linked_files is []
-# set :linked_files, %w{config/database.yml}
-
-# Default value for linked_dirs is []
-# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
-
-set :linked_files, %w{.env web/.htaccess}
-set :linked_dirs, %w{web/app/uploads}
 
 set :tmp_dir, "/home/timmygel/capistrano_tmp"
 
-SSHKit.config.command_map[:bash] = "/usr/bin/bash"
-SSHKit.config.command_map[:composer] = "php-cli /home/timmygel/composer.phar"
-
-# Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
-
-# Default value for keep_releases is 5
-# set :keep_releases, 5
+# Apache users with .htaccess files:
+# it needs to be added to linked_files so it persists across deploys:
+# set :linked_files, fetch(:linked_files, []).push('.env', 'web/.htaccess')
+set :linked_files, fetch(:linked_files, []).push('.env')
+set :linked_dirs, fetch(:linked_dirs, []).push('web/app/uploads')
 
 namespace :deploy do
   desc 'Restart application'
   task :restart do
-    on roles(:app) do
-     execute :apache2ctl, :graceful
+    on roles(:app), in: :sequence, wait: 5 do
+      # Your restart mechanism here, for example:
+      # execute :service, :nginx, :reload
     end
   end
 end
+
+# The above restart task is not run by default
+# Uncomment the following line to run it on deploys if needed
+# after 'deploy:publishing', 'deploy:restart'
 
 namespace :deploy do
   desc 'Update WordPress template root paths to point to the new release'
@@ -73,3 +56,8 @@ namespace :deploy do
     end
   end
 end
+
+# The above update_option_paths task is not run by default
+# Note that you need to have WP-CLI installed on your server
+# Uncomment the following line to run it on deploys if needed
+# after 'deploy:publishing', 'deploy:update_option_paths'

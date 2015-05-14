@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "952d855eea651bbba30decaf1f10840e",
+    "hash": "418d0f9cac545ed00ea2a15b3d4a7489",
     "packages": [
         {
             "name": "composer/installers",
@@ -103,16 +103,16 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.2.1",
+            "version": "4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "c1cefa55c50dadb75b5e9f0e4844e420c794ab48"
+                "reference": "998358f3b7a2c75caae11ff3c79e514951aac7f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/c1cefa55c50dadb75b5e9f0e4844e420c794ab48",
-                "reference": "c1cefa55c50dadb75b5e9f0e4844e420c794ab48",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/998358f3b7a2c75caae11ff3c79e514951aac7f6",
+                "reference": "998358f3b7a2c75caae11ff3c79e514951aac7f6",
                 "shasum": ""
             },
             "require": {
@@ -136,7 +136,7 @@
                 "blog",
                 "cms"
             ],
-            "time": "2015-04-27 17:16:13"
+            "time": "2015-05-07 01:46:09"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -182,6 +182,45 @@
             ],
             "description": "A custom installer to handle deploying WordPress with composer",
             "time": "2013-09-09 15:04:54"
+        },
+        {
+            "name": "ksascomm/ksas_flagship_blog",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ksascomm/ksas_flagship_blog.git",
+                "reference": "61480bc0f3e65c34af7260ee1b69fa1d13a5c342"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ksascomm/ksas_flagship_blog/zipball/61480bc0f3e65c34af7260ee1b69fa1d13a5c342",
+                "reference": "61480bc0f3e65c34af7260ee1b69fa1d13a5c342",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-theme",
+            "license": [
+                "GPL2"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Gelles",
+                    "email": "ksasweb@jhu.edu",
+                    "homepage": "http://krieger.jhu.edu"
+                }
+            ],
+            "description": "Blog theme based on Sage by roots.io",
+            "homepage": "http://github.com/ksascomm/ksas_flagship_blog",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "issues": "http://krieger.jhu.edu",
+                "source": "https://github.com/ksascomm/ksas_flagship_blog/tree/master"
+            },
+            "time": "2015-05-14 14:49:51"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -238,8 +277,11 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "ksascomm/ksas_flagship_blog": 20
+    },
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.4"
     },
