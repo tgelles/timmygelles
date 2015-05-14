@@ -8,7 +8,7 @@ set :branch, :master
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
-set :deploy_to, -> { "public_html/bedrock/#{fetch(:application)}" }
+set :deploy_to, -> { "bedrock" }
 # Default deploy_to directory is /var/www/my_app
 # set :deploy_to, '/var/www/my_app'
 
