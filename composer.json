@@ -45,6 +45,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/tgelles/timmygelles-theme.git"
+    },
+        {
+      "type": "vcs",
+      "url": "https://github.com/tgelles/portfolio_cpt.git"
     }
   ],
   "require": {
@@ -54,6 +58,7 @@
     "johnpbloch/wordpress": "4.2.2",
     "ksascomm/ksas_flagship_blog": "dev-master",
     "tgelles/timmygelles-theme": "dev-master"
+    "tgelles/portfolio_cpt": "dev-master"
   },
   "extra": {
     "installer-paths": {
