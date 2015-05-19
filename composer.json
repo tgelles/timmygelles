@@ -41,6 +41,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/ksascomm/ksas_flagship_blog.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/tgelles/timmygelles-theme.git"
     }
   ],
   "require": {
@@ -48,7 +52,8 @@
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "~1.0.9",
     "johnpbloch/wordpress": "4.2.2",
-    "ksascomm/ksas_flagship_blog": "dev-master"
+    "ksascomm/ksas_flagship_blog": "dev-master",
+    "tgelles/timmygelles-theme": "dev-master"
   },
   "extra": {
     "installer-paths": {

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "418d0f9cac545ed00ea2a15b3d4a7489",
+    "hash": "de9457055180b19ab70b98e8f671195f",
     "packages": [
         {
             "name": "composer/installers",
@@ -223,6 +223,45 @@
             "time": "2015-05-14 15:21:51"
         },
         {
+            "name": "tgelles/timmygelles-theme",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tgelles/timmygelles-theme.git",
+                "reference": "e69c3f750a88c16125773266fed663d545bd5429"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tgelles/timmygelles-theme/zipball/e69c3f750a88c16125773266fed663d545bd5429",
+                "reference": "e69c3f750a88c16125773266fed663d545bd5429",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-theme",
+            "license": [
+                "GPL2"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Gelles",
+                    "email": "timothygelles@gmail.com",
+                    "homepage": "http://timmygelles.com"
+                }
+            ],
+            "description": "My theme based on Sage by roots.io",
+            "homepage": "http://timmygelles.com",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "issues": "http://timmygelles.com",
+                "source": "https://github.com/tgelles/timmygelles-theme/tree/master"
+            },
+            "time": "2015-05-18 16:51:17"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v1.0.9",
             "source": {
@@ -278,7 +317,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "ksascomm/ksas_flagship_blog": 20
+        "ksascomm/ksas_flagship_blog": 20,
+        "tgelles/timmygelles-theme": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

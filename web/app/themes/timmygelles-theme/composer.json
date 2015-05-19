@@ -1,0 +1,23 @@
+{
+    "name": "tgelles/timmygelles-theme",
+    "type": "wordpress-theme",
+    "license": "GPL2",
+  	"description": "My theme based on Sage by roots.io",
+  	"homepage": "http://timmygelles.com",
+  	"authors": [
+      {
+      "name": "Tim Gelles",
+      "email": "timothygelles@gmail.com",
+      "homepage": "http://timmygelles.com"
+      }
+    ],
+    "keywords": [
+      "wordpress"
+    ],
+  "support": {
+    "issues": "http://timmygelles.com"
+  },
+  "require": {
+        "composer/installers": "~1.0"
+    } 
+}
