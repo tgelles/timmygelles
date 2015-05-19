@@ -18,8 +18,8 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
-    <div class="wrap container" role="document">
-      <div class="content row">
+    <div class="wrap<?php if ( ! is_front_page() ): ?>container<?php endif; ?>" role="document">
+    <div class="content<?php if ( ! is_front_page() ): ?>row<?php endif; ?>">
         <main class="main" role="main">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
