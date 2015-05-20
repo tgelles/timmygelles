@@ -5,7 +5,7 @@ body {
   font-family: $font-stack;
   font-weight: 300;
   font-style: normal;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 { 
@@ -46,16 +46,22 @@ h1, h2, h3, h4, h5, h6 {
    padding: 0;
 }
 
-.homepage-text{
+.homepage-banner {
   background-color: #f05f40;
   text-align: center;
   padding: 3em;
-   p {
+}
+
+.homepage-banner-text {
     font-size: 2em;
     color: #fff;
     padding-left: 2em;
     padding-right: 2em;
-   }
+}
+
+footer.content-info {
+  background-color: #f05f40;
+  color: white;
 }
 
 .intro-header {

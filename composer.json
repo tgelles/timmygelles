@@ -57,7 +57,7 @@
     "vlucas/phpdotenv": "~1.0.9",
     "johnpbloch/wordpress": "4.2.2",
     "ksascomm/ksas_flagship_blog": "dev-master",
-    "tgelles/timmygelles-theme": "dev-master"
+    "tgelles/timmygelles-theme": "dev-master",
     "tgelles/portfolio_cpt": "dev-master"
   },
   "extra": {

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "de9457055180b19ab70b98e8f671195f",
+    "hash": "2b8312ab25abb697aec5571d967c1dee",
     "packages": [
         {
             "name": "composer/installers",
@@ -223,6 +223,46 @@
             "time": "2015-05-14 15:21:51"
         },
         {
+            "name": "tgelles/portfolio_cpt",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tgelles/portfolio_cpt.git",
+                "reference": "15ac9755e644c986efcf2cd0861c1863dd9d3d2d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tgelles/portfolio_cpt/zipball/15ac9755e644c986efcf2cd0861c1863dd9d3d2d",
+                "reference": "15ac9755e644c986efcf2cd0861c1863dd9d3d2d",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.3.0"
+            },
+            "type": "wordpress-plugin",
+            "license": [
+                "GPL2"
+            ],
+            "authors": [
+                {
+                    "name": "Timmy Gelles",
+                    "email": "timothygelles@gmail.com",
+                    "homepage": "http://timmygelles.com"
+                }
+            ],
+            "description": "Creates a custom post type for my work.",
+            "homepage": "http://github.com/tgelles/portfolio_cpt",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "issues": "http://timmygelles.com",
+                "source": "https://github.com/tgelles/portfolio_cpt/tree/master"
+            },
+            "time": "2015-05-20 17:14:17"
+        },
+        {
             "name": "tgelles/timmygelles-theme",
             "version": "dev-master",
             "source": {
@@ -318,7 +358,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "ksascomm/ksas_flagship_blog": 20,
-        "tgelles/timmygelles-theme": 20
+        "tgelles/timmygelles-theme": 20,
+        "tgelles/portfolio_cpt": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
