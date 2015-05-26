@@ -1,4 +1,4 @@
-<h2>Portfolio</h2>
+<h2>Stuff I've Done</h2>
 
 <?php
  $portfolio_query = new WP_Query(array(
@@ -39,9 +39,11 @@ while ($portfolio_query->have_posts()) : $portfolio_query->the_post();
           <ul class="list-group list-group-flush text-center">
             <?php if (get_post_meta($post->ID, 'ecpt_portfolio_role', true)) : ?>
               <li class="list-group-item"><strong>Role:</strong><br><?php echo get_post_meta($post->ID, 'ecpt_portfolio_role', true); ?></li>
+            <hr>
             <?php endif; ?>  
             <?php if (get_post_meta($post->ID, 'ecpt_portfolio_overview', true)) : ?>
              <li class="list-group-item"><strong>Overview:</strong><br><?php echo get_post_meta($post->ID, 'ecpt_portfolio_overview', true); ?></li>
+            <hr>
             <?php endif; ?>
             <?php if (get_post_meta($post->ID, 'ecpt_portfolio_details', true)) : ?>
              <li class="list-group-item"><strong>Tech:</strong><br><?php echo get_post_meta($post->ID, 'ecpt_portfolio_details', true); ?></li>
