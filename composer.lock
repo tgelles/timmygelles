@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2b8312ab25abb697aec5571d967c1dee",
+    "hash": "6e0661f9ef8f56daa58e3ff62ffced22",
     "packages": [
         {
             "name": "composer/installers",
@@ -223,6 +223,48 @@
             "time": "2015-05-14 15:21:51"
         },
         {
+            "name": "roots/soil",
+            "version": "3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roots/soil.git",
+                "reference": "adaf4a0941224dfeab470a123d59dd925fc65004"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roots/soil/zipball/adaf4a0941224dfeab470a123d59dd925fc65004",
+                "reference": "adaf4a0941224dfeab470a123d59dd925fc65004",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scott Walkinshaw",
+                    "email": "scott.walkinshaw@gmail.com",
+                    "homepage": "https://github.com/swalkinshaw"
+                },
+                {
+                    "name": "Ben Word",
+                    "email": "ben@benword.com",
+                    "homepage": "https://github.com/retlehs"
+                }
+            ],
+            "description": "Clean up WordPress markup, relative URLs, nice search",
+            "homepage": "https://roots.io/plugins/soil/",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2015-04-29 04:46:56"
+        },
+        {
             "name": "tgelles/portfolio_cpt",
             "version": "dev-master",
             "source": {
@@ -268,12 +310,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tgelles/timmygelles-theme.git",
-                "reference": "30bddcf9c9f4fb573bbe763a428ebea504ff086a"
+                "reference": "e69c3f750a88c16125773266fed663d545bd5429"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tgelles/timmygelles-theme/zipball/30bddcf9c9f4fb573bbe763a428ebea504ff086a",
-                "reference": "30bddcf9c9f4fb573bbe763a428ebea504ff086a",
+                "url": "https://api.github.com/repos/tgelles/timmygelles-theme/zipball/e69c3f750a88c16125773266fed663d545bd5429",
+                "reference": "e69c3f750a88c16125773266fed663d545bd5429",
                 "shasum": ""
             },
             "require": {
@@ -299,7 +341,7 @@
                 "issues": "http://timmygelles.com",
                 "source": "https://github.com/tgelles/timmygelles-theme/tree/master"
             },
-            "time": "2015-05-26 01:23:54"
+            "time": "2015-05-18 16:51:17"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -351,6 +393,26 @@
                 "environment"
             ],
             "time": "2014-10-16 14:50:21"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "0.6.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "tags/0.6.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-importer/"
         }
     ],
     "packages-dev": [],

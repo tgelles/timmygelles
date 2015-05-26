@@ -58,7 +58,9 @@
     "johnpbloch/wordpress": "4.2.2",
     "ksascomm/ksas_flagship_blog": "dev-master",
     "tgelles/timmygelles-theme": "dev-master",
-    "tgelles/portfolio_cpt": "dev-master"
+    "tgelles/portfolio_cpt": "dev-master",
+    "roots/soil": "3.4.0",
+    "wpackagist-plugin/wordpress-importer": "0.6.*"
   },
   "extra": {
     "installer-paths": {
