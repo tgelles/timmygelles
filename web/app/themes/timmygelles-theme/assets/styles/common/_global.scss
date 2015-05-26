@@ -1,5 +1,7 @@
 $font-stack: 'Neuton', serif;
 $font-header: 'Montserrat', sans-serif;
+$global-color: #007A53;
+$portfolio-color: #f7f7f7;
 
 body {
   font-family: $font-stack;
@@ -21,8 +23,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-item {  
-  background-color: #f7f7f7;
+  background-color: $portfolio-color;
   -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-default {
+  background-color: $portfolio-color;
+    -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -47,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .homepage-banner {
-  background-color: #f05f40;
+  background-color: $global-color;
   text-align: center;
   padding: 3em;
 }
@@ -60,8 +72,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 footer.content-info {
-  background-color: #f05f40;
+  background-color: $global-color;
   color: white;
+  margin-top: 2em;
 }
 
 .intro-header {

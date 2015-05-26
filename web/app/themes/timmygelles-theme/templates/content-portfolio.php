@@ -1,17 +1,23 @@
 <h2>Portfolio</h2>
 
-<?php //Set Portfolio Query Parameters
-        $portfolio_query = new WP_Query(array(
+<?php
+ $portfolio_query = new WP_Query(array(
           'post_type' => 'portfolio',
-          'orderby' => 'ID',
+          'orderby' => 'modified',
           'order' => 'DESC',
           'posts_per_page' => '-1'
           ));
-           ?>
-
-<?php while ($portfolio_query->have_posts()) : $portfolio_query->the_post();  ?>
-<div class="col-sm-12 col-md-4">
-  <div class="portfolio-item text-center">
+if( $portfolio_query->have_posts() ) {
+    echo '';
+$i = 0;
+while ($portfolio_query->have_posts()) : $portfolio_query->the_post();
+    if($i % 3 == 0) { ?> 
+        <div class="row">
+    <?php
+    }
+    ?>
+    <div class="col-sm-12 col-md-4">
+      <div class="portfolio-item text-center">
         <h3>
           <?php if (get_post_meta($post->ID, 'ecpt_portfolio_title', true)) : ?>
             <?php echo get_post_meta($post->ID, 'ecpt_portfolio_title', true); ?>
@@ -24,6 +30,12 @@
             <?php } else {
               the_post_thumbnail('full', array('class' => 'portfolio-img img-responsive') );
         } ?>
+        
+        <button class="btn btn-primary btn-portfolio" type="button" data-toggle="collapse" data-target="#post-<?php echo get_the_ID(); ?>" aria-expanded="false" aria-controls="collapseExample">
+          Tell Me More!
+        </button>
+
+        <div class="collapse" id="post-<?php echo get_the_ID(); ?>">
           <ul class="list-group list-group-flush text-center">
             <?php if (get_post_meta($post->ID, 'ecpt_portfolio_role', true)) : ?>
               <li class="list-group-item"><strong>Role:</strong><br><?php echo get_post_meta($post->ID, 'ecpt_portfolio_role', true); ?></li>
@@ -34,7 +46,20 @@
             <?php if (get_post_meta($post->ID, 'ecpt_portfolio_details', true)) : ?>
              <li class="list-group-item"><strong>Tech:</strong><br><?php echo get_post_meta($post->ID, 'ecpt_portfolio_details', true); ?></li>
             <?php endif; ?>     
-            </ul> 
+            </ul>
+        </div>
   </div>
 </div>
-<?php endwhile; ?> 
+<?php $i++; 
+      if($i != 0 && $i % 3 == 0) { ?>
+        </div><!--/.row-->
+        <div class="clearfix"></div>
+
+      <?php
+       } ?>
+
+      <?php  
+        endwhile;
+        }
+        wp_reset_query();
+        ?>

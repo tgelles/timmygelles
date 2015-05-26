@@ -9,7 +9,7 @@
       ?>
     </div>
   </nav>
-  <div class="intro-header" style="background-image: url('<?php echo get_template_directory_uri() ?>/dist/images/header.jpg')">
+  <div class="intro-header" style="background-image: url('<?php echo get_template_directory_uri() ?>/dist/images/header1.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
