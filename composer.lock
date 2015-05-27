@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6e0661f9ef8f56daa58e3ff62ffced22",
+    "hash": "e2648597666b53e67923e3f80e4ac0fa",
     "packages": [
         {
             "name": "composer/installers",
@@ -184,45 +184,6 @@
             "time": "2013-09-09 15:04:54"
         },
         {
-            "name": "ksascomm/ksas_flagship_blog",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ksascomm/ksas_flagship_blog.git",
-                "reference": "8d8db1667e293d3a1ea3665b357beeed118799b1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ksascomm/ksas_flagship_blog/zipball/8d8db1667e293d3a1ea3665b357beeed118799b1",
-                "reference": "8d8db1667e293d3a1ea3665b357beeed118799b1",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-theme",
-            "license": [
-                "GPL2"
-            ],
-            "authors": [
-                {
-                    "name": "Tim Gelles",
-                    "email": "ksasweb@jhu.edu",
-                    "homepage": "http://krieger.jhu.edu"
-                }
-            ],
-            "description": "Blog theme based on Sage by roots.io",
-            "homepage": "http://github.com/ksascomm/ksas_flagship_blog",
-            "keywords": [
-                "wordpress"
-            ],
-            "support": {
-                "issues": "http://krieger.jhu.edu",
-                "source": "https://github.com/ksascomm/ksas_flagship_blog/tree/master"
-            },
-            "time": "2015-05-14 15:21:51"
-        },
-        {
             "name": "roots/soil",
             "version": "3.4.0",
             "source": {
@@ -310,12 +271,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tgelles/timmygelles-theme.git",
-                "reference": "f361a4a35446e5bfa8be257139626bfc87b6448c"
+                "reference": "5c397bae19c43d946f4c0cfb4e27190f35bcea4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tgelles/timmygelles-theme/zipball/f361a4a35446e5bfa8be257139626bfc87b6448c",
-                "reference": "f361a4a35446e5bfa8be257139626bfc87b6448c",
+                "url": "https://api.github.com/repos/tgelles/timmygelles-theme/zipball/5c397bae19c43d946f4c0cfb4e27190f35bcea4b",
+                "reference": "5c397bae19c43d946f4c0cfb4e27190f35bcea4b",
                 "shasum": ""
             },
             "require": {
@@ -341,7 +302,7 @@
                 "issues": "http://timmygelles.com",
                 "source": "https://github.com/tgelles/timmygelles-theme/tree/master"
             },
-            "time": "2015-05-27 13:44:13"
+            "time": "2015-05-27 22:02:47"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -419,9 +380,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "ksascomm/ksas_flagship_blog": 20,
-        "tgelles/timmygelles-theme": 20,
-        "tgelles/portfolio_cpt": 20
+        "tgelles/portfolio_cpt": 20,
+        "tgelles/timmygelles-theme": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
