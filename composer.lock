@@ -310,12 +310,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tgelles/timmygelles-theme.git",
-                "reference": "30bddcf9c9f4fb573bbe763a428ebea504ff086a"
+                "reference": "f361a4a35446e5bfa8be257139626bfc87b6448c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tgelles/timmygelles-theme/zipball/30bddcf9c9f4fb573bbe763a428ebea504ff086a",
-                "reference": "30bddcf9c9f4fb573bbe763a428ebea504ff086a",
+                "url": "https://api.github.com/repos/tgelles/timmygelles-theme/zipball/f361a4a35446e5bfa8be257139626bfc87b6448c",
+                "reference": "f361a4a35446e5bfa8be257139626bfc87b6448c",
                 "shasum": ""
             },
             "require": {
@@ -341,7 +341,7 @@
                 "issues": "http://timmygelles.com",
                 "source": "https://github.com/tgelles/timmygelles-theme/tree/master"
             },
-            "time": "2015-05-26 01:23:54"
+            "time": "2015-05-27 13:44:13"
         },
         {
             "name": "vlucas/phpdotenv",

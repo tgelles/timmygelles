@@ -40,14 +40,6 @@
     },
     {
       "type": "vcs",
-      "url": "https://github.com/ksascomm/ksas_flagship_blog.git"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/tgelles/timmygelles-theme.git"
-    },
-        {
-      "type": "vcs",
       "url": "https://github.com/tgelles/portfolio_cpt.git"
     }
   ],
@@ -56,8 +48,6 @@
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "~1.0.9",
     "johnpbloch/wordpress": "4.2.2",
-    "ksascomm/ksas_flagship_blog": "dev-master",
-    "tgelles/timmygelles-theme": "dev-master",
     "tgelles/portfolio_cpt": "dev-master",
     "roots/soil": "3.4.0",
     "wpackagist-plugin/wordpress-importer": "0.6.*"
