@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e2648597666b53e67923e3f80e4ac0fa",
+    "hash": "7b879521784a2d70ad14f780cbab8ca3",
     "packages": [
         {
             "name": "composer/installers",
@@ -266,45 +266,6 @@
             "time": "2015-05-20 17:14:17"
         },
         {
-            "name": "tgelles/timmygelles-theme",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tgelles/timmygelles-theme.git",
-                "reference": "fe28f5a3c49c01e65cc9f5f8d005e1e9e58c47e4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tgelles/timmygelles-theme/zipball/fe28f5a3c49c01e65cc9f5f8d005e1e9e58c47e4",
-                "reference": "fe28f5a3c49c01e65cc9f5f8d005e1e9e58c47e4",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-theme",
-            "license": [
-                "GPL2"
-            ],
-            "authors": [
-                {
-                    "name": "Tim Gelles",
-                    "email": "timothygelles@gmail.com",
-                    "homepage": "http://timmygelles.com"
-                }
-            ],
-            "description": "My theme based on Sage by roots.io",
-            "homepage": "http://timmygelles.com",
-            "keywords": [
-                "wordpress"
-            ],
-            "support": {
-                "issues": "http://timmygelles.com",
-                "source": "https://github.com/tgelles/timmygelles-theme/tree/master"
-            },
-            "time": "2015-05-27 22:12:59"
-        },
-        {
             "name": "vlucas/phpdotenv",
             "version": "v1.0.9",
             "source": {
@@ -380,8 +341,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "tgelles/portfolio_cpt": 20,
-        "tgelles/timmygelles-theme": 20
+        "tgelles/portfolio_cpt": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -41,10 +41,6 @@
     {
       "type": "vcs",
       "url": "https://github.com/tgelles/portfolio_cpt.git"
-    },
-        {
-      "type": "vcs",
-      "url": "https://github.com/tgelles/timmygelles-theme.git"
     }
   ],
   "require": {
@@ -53,7 +49,6 @@
     "vlucas/phpdotenv": "~1.0.9",
     "johnpbloch/wordpress": "4.2.2",
     "tgelles/portfolio_cpt": "dev-master",
-    "tgelles/timmygelles-theme": "dev-master",
     "roots/soil": "3.4.0",
     "wpackagist-plugin/wordpress-importer": "0.6.*"
   },
