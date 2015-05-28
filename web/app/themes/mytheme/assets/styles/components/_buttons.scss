@@ -1,0 +1,12 @@
+.btn-portfolio {
+	margin: 1em;
+}
+
+.btn-primary {
+background-color: $global-color;
+border: none;
+}
+
+.btn-primary:hover {
+  background-color: darken($global-color, 5%);
+}
