@@ -12,6 +12,33 @@
   background-color: inherit;
 }
 
+.intro-header {
+  background-color: #808080;
+  background: no-repeat center center;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  margin-top:  -1em;
+  .post-heading {
+    padding: 100px 0 50px;
+    color: white;
+    h1 {
+      font-size: 85px;
+    }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+  .intro-header {
+    .site-heading, .post-heading, .page-heading {
+      padding: 150px 0;
+    }
+  }
+}
+
+
 .homepage-banner {
   background-color: $global-color;
   text-align: center;
@@ -25,47 +52,16 @@
     padding-right: 2em;
 }
 
-.intro-header {
-  background-color: #808080;
-  background: no-repeat center center;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  margin-top:  -1em;
-  .post-heading {
-  	padding: 100px 0 50px;
-    color: white;
-    h1 {
-      font-size: 35px;
-    }
-    }
-}
-
-@media only screen and (min-width: 768px) {
-  .intro-header {
-    .site-heading, .post-heading, .page-heading {
-      padding: 150px 0;
-    }
+@media (max-width: $screen-sm-min) { 
+  .homepage-banner-text {
+    font-size: 1.5em;
+    padding-left: 0;
+    padding-right: 0;
   }
-}
-
-@media only screen and (min-width: 768px) {
-  .intro-header {
-    .site-heading h1, .page-heading h1 {
-      font-size: 80px;
-    }
-  }
-}
-
-@media only screen and (min-width: 768px) {
   .intro-header .post-heading {
     h1 {
-      font-size: 55px;
-    }
-    .subheading {
-      font-size: 30px;
+      font-size: 50px;
+      padding-left: 15px;
     }
   }
 }
