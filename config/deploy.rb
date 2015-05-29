@@ -34,18 +34,6 @@ namespace :deploy do
   end
 end
 
-namespace :deploy do
-  desc 'Symlink'
-    task :link_release_to_public do
-      on roles(:app) do
-        within "bedrock" do
-            execute "rm -rf public_html && ln -sf #{current_path}/web public_html"
-        end
-    end 
-end
-
-end
-
 # The above restart task is not run by default
 # Uncomment the following line to run it on deploys if needed
 # after 'deploy:publishing', 'deploy:restart'
