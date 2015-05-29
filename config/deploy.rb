@@ -1,4 +1,4 @@
-#set :application, 'bedrock' #for staging
+set :application, 'bedrock' #for staging
 set :repo_url, 'git@github.com:tgelles/timmygelles.git'
 
 # Branch options
@@ -9,8 +9,8 @@ set :repo_url, 'git@github.com:tgelles/timmygelles.git'
 # This could be overridden in a stage config file
 set :branch, :master
 
-#set :deploy_to, -> { "~/public_html/#{fetch(:application)}" }
-set :deploy_to, -> { "~/public_html/" }
+set :deploy_to, -> { "~/#{fetch(:application)}" }
+#set :deploy_to, -> { "~/public_html/" }
 
 
 # Use :debug for more verbose output when troubleshooting
@@ -32,6 +32,18 @@ namespace :deploy do
       # execute :service, :nginx, :reload
     end
   end
+end
+
+namespace :deploy do
+  desc 'Symlink'
+    task :link_release_to_public do
+      on roles(:app) do
+        within "bedrock" do
+            execute "rm -rf public_html && ln -sf #{current_path}/web public_html"
+        end
+    end 
+end
+
 end
 
 # The above restart task is not run by default
