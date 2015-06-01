@@ -1,4 +1,4 @@
-<h2>Stuff I've Done With Satchel</h2>
+<h2>Stuff I've Done</h2>
 
 <?php
  $portfolio_query = new WP_Query(array(
