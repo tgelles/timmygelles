@@ -6,9 +6,18 @@ $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 // Colors
-$brand-primary:         #27ae60;
+$brand-primary:#27ae60;
 
 $font-stack: 'Neuton', serif;
 $font-header: 'Montserrat', sans-serif;
 $global-color: #007A53;
 $portfolio-color: #f7f7f7;
+
+$nav-box-shadow: rgba(0, 0, 0, 0.3);
+$nav-radius: 2px;
+
+@mixin border-radius($nav-radius) {
+  -webkit-border-radius: $nav-radius;
+  border-radius: $nav-radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}

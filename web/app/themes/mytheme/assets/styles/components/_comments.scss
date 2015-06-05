@@ -17,3 +17,21 @@
   @extend .btn;
   @extend .btn-primary;
 }
+
+#comments{
+  margin-top: 5em;
+}
+
+.comment-body {
+  margin-left: 1em;
+}
+
+.comment {
+min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: $portfolio-color;
+  border: 1px solid #e3e3e3;
+  @include border-radius($nav-radius + 2px);
+  @include box-shadow($nav-box-shadow 0px 2px 2px);
+}
