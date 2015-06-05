@@ -1,7 +1,5 @@
 .navbar-default {
   background-color: $portfolio-color;
-  /*-moz-border-radius: 2px;
-  -webkit-border-radius: 2px;  border-radius: 2px;*/
   @include border-radius($nav-radius);
   @include box-shadow($nav-box-shadow 0px 2px 2px);
 }
@@ -51,12 +49,11 @@
 }
 
 @media (max-width: $screen-sm-min) {
-
   .homepage-banner {
-    padding: inherit;
+  padding: inherit;
   }
   .homepage-banner-text {
-    font-size: 1.5em;
+    font-size: 1.1em;
     padding-left: 0;
     padding-right: 0;
   }

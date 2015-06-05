@@ -9,8 +9,8 @@ set :repo_url, 'git@github.com:tgelles/timmygelles.git'
 # This could be overridden in a stage config file
 set :branch, :master
 
-set :deploy_to, -> { "~/public_html/#{fetch(:application)}" }
-#set :deploy_to, -> { "~/public_html/" }
+#set :deploy_to, -> { "~/public_html/#{fetch(:application)}" }
+set :deploy_to, -> { "~/#{fetch(:application)}" }
 
 
 # Use :debug for more verbose output when troubleshooting
