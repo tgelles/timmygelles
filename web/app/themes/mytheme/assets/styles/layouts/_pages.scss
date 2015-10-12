@@ -1,12 +1,16 @@
-.portfolio-item {  
+.portfolio-item {
   background-color: $portfolio-color;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  @include border-radius($nav-radius);
+  @include box-shadow($nav-box-shadow 0px 2px 2px);
   h3{
   	padding: 10px 15px 0px;
+    @media (max-width: $screen-md-max) {
+      font-size: 18px;
+    }
   }
+}
+
+
+.portfolio-img {
+  width:100%;
 }

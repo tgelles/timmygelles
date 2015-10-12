@@ -7,16 +7,12 @@
           'order' => 'DESC',
           'posts_per_page' => '-1'
           ));
-if( $portfolio_query->have_posts() ) {
-    echo '';
-$i = 0;
-while ($portfolio_query->have_posts()) : $portfolio_query->the_post();
-    if($i % 3 == 0) { ?> 
-        <div class="row">
-    <?php
-    }
-    ?>
-    <div class="col-sm-12 col-md-4">
+?>
+<?php $i = 1; //start the counter before the loop?>
+<?php if($portfolio_query->have_posts()): global $more; ?>
+  <div class="row">
+    <?php while($portfolio_query->have_posts()): $portfolio_query->the_post(); $more = 0; ?>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-height col-md-height col-sm-height col-top <?php post_class( 'clearfix' ); ?>">
       <div class="portfolio-item text-center">
         <h3>
           <?php if (get_post_meta($post->ID, 'ecpt_portfolio_title', true)) : ?>
@@ -30,7 +26,7 @@ while ($portfolio_query->have_posts()) : $portfolio_query->the_post();
             <?php } else {
               the_post_thumbnail('full', array('class' => 'portfolio-img img-responsive') );
         } ?>
-        
+
         <button class="btn btn-primary btn-portfolio" type="button" data-toggle="collapse" data-target="#post-<?php echo get_the_ID(); ?>" aria-expanded="false" aria-controls="collapseExample">
           Tell Me More!
         </button>
@@ -40,28 +36,21 @@ while ($portfolio_query->have_posts()) : $portfolio_query->the_post();
             <?php if (get_post_meta($post->ID, 'ecpt_portfolio_role', true)) : ?>
               <li class="list-group-item"><strong>Role:</strong><br><?php echo get_post_meta($post->ID, 'ecpt_portfolio_role', true); ?></li>
             <hr>
-            <?php endif; ?>  
+            <?php endif; ?>
             <?php if (get_post_meta($post->ID, 'ecpt_portfolio_overview', true)) : ?>
              <li class="list-group-item"><strong>Overview:</strong><br><?php echo get_post_meta($post->ID, 'ecpt_portfolio_overview', true); ?></li>
             <hr>
             <?php endif; ?>
             <?php if (get_post_meta($post->ID, 'ecpt_portfolio_details', true)) : ?>
              <li class="list-group-item"><strong>Tech:</strong><br><?php echo get_post_meta($post->ID, 'ecpt_portfolio_details', true); ?></li>
-            <?php endif; ?>     
+            <?php endif; ?>
             </ul>
         </div>
   </div>
-</div>
-<?php $i++; 
-      if($i != 0 && $i % 3 == 0) { ?>
-        </div><!--/.row-->
-        <div class="clearfix"></div>
+</div> <!--end: portfolio item -->
+        <?php if ( $i%2 == 0 ){ echo '<div class="clearfix visible-sm-block">'; } // show clearfix after each 2 cols for xs ?>
+        <?php if ( $i%3 == 0 ){ echo '<div class="clearfix visible-lg-block visible-md-block">'; } // show clearfix after each 3 cols for lg and md ?>
 
-      <?php
-       } ?>
-
-      <?php  
-        endwhile;
-        }
-        wp_reset_query();
-        ?>
+      <?php endwhile; ?>
+</div><!-- end: row -->
+<?php endif; ?>
