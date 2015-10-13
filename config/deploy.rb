@@ -1,8 +1,7 @@
 set :application, 'bedrock' 
 set :repo_url, 'git@github.com:tgelles/timmygelles.git'
 
-SSHKit.config.command_map[:composer] = "~/usr/local/bin/composer"
-
+set :composer_install_flags, '--no-dev --no-interaction --optimize-autoloader'
 
 # Branch options
 # Prompts for the branch name (defaults to current branch)
