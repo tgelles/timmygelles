@@ -12,7 +12,7 @@
 <?php if($portfolio_query->have_posts()): global $more; ?>
   <div class="row">
     <?php while($portfolio_query->have_posts()): $portfolio_query->the_post(); $more = 0; ?>
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-height col-md-height col-sm-height col-top <?php post_class( 'clearfix' ); ?>">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-height col-md-height col-sm-height col-top portfolio">
       <div class="portfolio-item text-center">
         <h3>
           <?php if (get_post_meta($post->ID, 'ecpt_portfolio_title', true)) : ?>

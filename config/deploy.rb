@@ -1,6 +1,7 @@
 set :application, 'bedrock' 
 set :repo_url, 'git@github.com:tgelles/timmygelles.git'
 
+#shows full composer install sequences
 set :composer_install_flags, '--no-dev --no-interaction --optimize-autoloader'
 
 # Branch options
