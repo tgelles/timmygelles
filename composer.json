@@ -50,7 +50,8 @@
     "johnpbloch/wordpress": "4.3.1",
     "tgelles/portfolio_cpt": "dev-master",
     "roots/soil": "3.4.0",
-    "wpackagist-plugin/wordpress-importer": "0.6.*"
+    "wpackagist-plugin/wordpress-importer": "0.6.*",
+    "wpackagist-plugin/a3-lazy-load": "dev-trunk"
   },
   "extra": {
     "installer-paths": {
