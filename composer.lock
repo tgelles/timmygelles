@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "43434774545e7ab06ebfc7381704dcf2",
-    "content-hash": "dd41ed792889e99cac5e80106fcf5e5b",
+    "hash": "fa301b3990a869c9a9d009e100d47bbd",
+    "content-hash": "224cfdbac33fdd817ad71a5413198fe7",
     "packages": [
         {
             "name": "composer/installers",
@@ -154,7 +154,7 @@
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "1.0"
+                "composer-plugin-api": "^1.0"
             },
             "conflict": {
                 "composer/installers": "<1.0.6"
@@ -321,6 +321,27 @@
             "time": "2014-10-16 14:50:21"
         },
         {
+            "name": "wpackagist-plugin/a3-lazy-load",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/a3-lazy-load/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/a3-lazy-load.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/a3-lazy-load/",
+            "time": "2015-09-18 05:09:19"
+        },
+        {
             "name": "wpackagist-plugin/wordpress-importer",
             "version": "0.6.1",
             "source": {
@@ -345,7 +366,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "tgelles/portfolio_cpt": 20
+        "tgelles/portfolio_cpt": 20,
+        "wpackagist-plugin/a3-lazy-load": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
