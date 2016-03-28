@@ -22,7 +22,7 @@
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "1.0"
+                "composer-plugin-api": "^1.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
@@ -157,7 +157,7 @@
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "1.0"
+                "composer-plugin-api": "^1.0"
             },
             "conflict": {
                 "composer/installers": "<1.0.6"
@@ -328,7 +328,7 @@
             "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/a3-lazy-load/",
+                "url": "https://plugins.svn.wordpress.org/a3-lazy-load/",
                 "reference": "trunk"
             },
             "dist": {
@@ -349,7 +349,7 @@
             "version": "0.6.1",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wordpress-importer/",
+                "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
                 "reference": "tags/0.6.1"
             },
             "dist": {
