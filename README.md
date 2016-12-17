@@ -1,4 +1,4 @@
-# My portfolio website built with [Bedrock](https://roots.io/bedrock/) & Capistrano. Below are the docs for using this version of Bedrck.
+# My portfolio website built with [Bedrock](https://roots.io/bedrock/) & Capistrano. Below are the docs for using this version of Bedrock.
 
 ##  [Bedrock](https://roots.io/bedrock/)
 [![Build Status](https://travis-ci.org/roots/bedrock.svg)](https://travis-ci.org/roots/bedrock)
