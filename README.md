@@ -1,11 +1,13 @@
-# [Bedrock](https://roots.io/bedrock/)
+# My portfolio website built with [Bedrock](https://roots.io/bedrock/) & Capistrano. Below are the docs for using this version of Bedrck.
+
+##  [Bedrock](https://roots.io/bedrock/)
 [![Build Status](https://travis-ci.org/roots/bedrock.svg)](https://travis-ci.org/roots/bedrock)
 
 Bedrock is a modern WordPress stack that helps you get started with the best development tools and project structure.
 
 Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](http://12factor.net/) methodology including the [WordPress specific version](https://roots.io/twelve-factor-wordpress/).
 
-## Features
+### Features
 
 * Dependency management with [Composer](http://getcomposer.org)
 * Better folder structure
@@ -19,11 +21,11 @@ Use [bedrock-ansible](https://github.com/roots/bedrock-ansible) for additional f
 * Easy server provisioning with [Ansible](http://www.ansible.com/) (Ubuntu 14.04, PHP 5.6 or HHVM, MariaDB)
 * One-command deploys
 
-## Requirements
+### Requirements
 
 * PHP >= 5.4
 
-## Installation
+### Installation
 
 1. Clone the git repo - `git clone https://github.com/roots/bedrock.git`
 2. Run `composer install`
@@ -39,7 +41,7 @@ Use [bedrock-ansible](https://github.com/roots/bedrock-ansible) for additional f
 4. Set your site vhost document root to `/path/to/site/web/` (`/path/to/site/current/web/` if using deploys)
 5. Access WP admin at `http://example.com/wp/wp-admin`
 
-## Deploys
+### Deploys
 
 There are two methods to deploy Bedrock sites out of the box:
 
@@ -50,7 +52,7 @@ Any other deployment method can be used as well with one requirement:
 
 `composer install` must be run as part of the deploy process.
 
-## Documentation
+### Documentation
 
 * [Folder structure](https://github.com/roots/bedrock/wiki/Folder-structure)
 * [Configuration files](https://github.com/roots/bedrock/wiki/Configuration-files)
@@ -59,11 +61,11 @@ Any other deployment method can be used as well with one requirement:
 * [wp-cron](https://github.com/roots/bedrock/wiki/wp-cron)
 * [mu-plugins autoloader](https://github.com/roots/bedrock/wiki/mu-plugins-autoloader)
 
-## Contributing
+### Contributing
 
 Contributions are welcome from everyone. We have [contributing guidelines](CONTRIBUTING.md) to help you get started.
 
-## Community
+### Community
 
 Keep track of development and community news.
 
