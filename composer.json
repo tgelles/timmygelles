@@ -47,11 +47,11 @@
     "php": ">=5.4",
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "~1.0.9",
-    "johnpbloch/wordpress": "4.7",
     "tgelles/portfolio_cpt": "dev-master",
     "roots/soil": "3.7.0",
     "wpackagist-plugin/wordpress-importer": "0.6.*",
-    "wpackagist-plugin/a3-lazy-load": "1.7.1"
+    "wpackagist-plugin/a3-lazy-load": "1.7.1",
+    "johnpbloch/wordpress": "^4.7"
   },
   "extra": {
     "installer-paths": {
