@@ -51,7 +51,7 @@
     "roots/soil": "3.7.0",
     "wpackagist-plugin/wordpress-importer": "0.6.*",
     "wpackagist-plugin/a3-lazy-load": "1.7.1",
-    "johnpbloch/wordpress": "^4.7"
+    "johnpbloch/wordpress": "4.7.3"
   },
   "extra": {
     "installer-paths": {

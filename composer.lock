@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "66a4f09ab59ea11e6d14226972b10d66",
+    "content-hash": "ee1d2cdaba410a072c65c078ad2f9148",
     "packages": [
         {
             "name": "composer/installers",
@@ -21,7 +21,7 @@
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "1.0"
+                "composer-plugin-api": "^1.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
@@ -197,7 +197,7 @@
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "1.0"
+                "composer-plugin-api": "^1.0"
             },
             "conflict": {
                 "composer/installers": "<1.0.6"
