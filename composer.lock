@@ -21,7 +21,7 @@
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0"
+                "composer-plugin-api": "1.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
@@ -204,7 +204,7 @@
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0"
+                "composer-plugin-api": "1.0"
             },
             "conflict": {
                 "composer/installers": "<1.0.6"
