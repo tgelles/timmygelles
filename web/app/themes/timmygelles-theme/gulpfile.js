@@ -12,7 +12,7 @@ var jshint       = require('gulp-jshint');
 var lazypipe     = require('lazypipe');
 var less         = require('gulp-less');
 var merge        = require('merge-stream');
-var minifyCss    = require('gulp-minify-css');
+var cssNano      = require('gulp-cssnano');
 var plumber      = require('gulp-plumber');
 var rev          = require('gulp-rev');
 var runSequence  = require('run-sequence');
@@ -57,11 +57,21 @@ var enabled = {
   // Disable source maps when `--production`
   maps: !argv.production,
   // Fail styles task on error when `--production`
-  failStyleTask: argv.production
+  failStyleTask: argv.production,
+  // Fail due to JSHint warnings only when `--production`
+  failJSHint: argv.production,
+  // Strip debug statments from javascript when `--production`
+  stripJSDebug: argv.production
 };
 
 // Path to the compiled assets manifest in the dist directory
 var revManifest = path.dist + 'assets.json';
+
+// Error checking; produce an error rather than crashing.
+var onError = function(err) {
+  console.log(err.toString());
+  this.emit('end');
+};
 
 // ## Reusable Pipelines
 // See https://github.com/OverZealous/lazypipe
@@ -81,9 +91,9 @@ var cssTasks = function(filename) {
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.init());
     })
-    .pipe(function() {
-      return gulpif('*.less', less());
-    })
+    //.pipe(function() {
+     // return gulpif('*.less', less());
+    // })
     .pipe(function() {
       return gulpif('*.scss', sass({
         outputStyle: 'nested', // libsass doesn't support expanded yet
@@ -96,22 +106,20 @@ var cssTasks = function(filename) {
     .pipe(autoprefixer, {
       browsers: [
         'last 2 versions',
-        'ie 8',
-        'ie 9',
-        'android 2.3',
         'android 4',
         'opera 12'
       ]
     })
-    .pipe(minifyCss, {
-      advanced: false,
-      rebase: false
+    .pipe(cssNano, {
+      safe: true
     })
     .pipe(function() {
       return gulpif(enabled.rev, rev());
     })
     .pipe(function() {
-      return gulpif(enabled.maps, sourcemaps.write('.'));
+      return gulpif(enabled.maps, sourcemaps.write('.', {
+        sourceRoot: 'assets/styles/'
+      }));
     })();
 };
 
@@ -128,12 +136,18 @@ var jsTasks = function(filename) {
       return gulpif(enabled.maps, sourcemaps.init());
     })
     .pipe(concat, filename)
-    .pipe(uglify)
+    .pipe(uglify, {
+      compress: {
+        'drop_debugger': enabled.stripJSDebug
+      }
+    })
     .pipe(function() {
       return gulpif(enabled.rev, rev());
     })
     .pipe(function() {
-      return gulpif(enabled.maps, sourcemaps.write('.'));
+      return gulpif(enabled.maps, sourcemaps.write('.', {
+        sourceRoot: 'assets/scripts/'
+      }));
     })();
 };
 
@@ -169,6 +183,7 @@ gulp.task('styles', ['wiredep'], function() {
       });
     }
     merged.add(gulp.src(dep.globs, {base: 'styles'})
+      .pipe(plumber({errorHandler: onError}))
       .pipe(cssTasksInstance));
   });
   return merged
@@ -183,6 +198,7 @@ gulp.task('scripts', ['jshint'], function() {
   manifest.forEachDependency('js', function(dep) {
     merged.add(
       gulp.src(dep.globs, {base: 'scripts'})
+        .pipe(plumber({errorHandler: onError}))
         .pipe(jsTasks(dep.name))
     );
   });
@@ -204,11 +220,11 @@ gulp.task('fonts', function() {
 // `gulp images` - Run lossless compression on all the images.
 gulp.task('images', function() {
   return gulp.src(globs.images)
-    .pipe(imagemin({
-      progressive: true,
-      interlaced: true,
-      svgoPlugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false}]
-    }))
+    .pipe(imagemin([
+      imagemin.jpegtran({progressive: true}),
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.svgo({plugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false}]})
+    ]))
     .pipe(gulp.dest(path.dist + 'images'))
     .pipe(browserSync.stream());
 });
@@ -221,7 +237,7 @@ gulp.task('jshint', function() {
   ].concat(project.js))
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(jshint.reporter('fail'));
+    .pipe(gulpif(enabled.failJSHint, jshint.reporter('fail')));
 });
 
 // ### Clean

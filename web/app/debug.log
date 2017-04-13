@@ -569,3 +569,14 @@
 [24-Mar-2017 01:48:02 UTC] PHP Notice:  ob_end_flush(): failed to delete and flush buffer. No buffer to delete or flush in /Users/timmygelles/Documents/sites/timmygelles/web/app/plugins/relative-url/relative-url.php on line 133
 [24-Mar-2017 01:50:06 UTC] PHP Notice:  ob_end_flush(): failed to delete and flush buffer. No buffer to delete or flush in /Users/timmygelles/Documents/sites/timmygelles/web/app/plugins/relative-url/relative-url.php on line 133
 [24-Mar-2017 01:52:07 UTC] PHP Notice:  ob_end_flush(): failed to delete and flush buffer. No buffer to delete or flush in /Users/timmygelles/Documents/sites/timmygelles/web/app/plugins/relative-url/relative-url.php on line 133
+[13-Apr-2017 13:56:20 UTC] PHP Notice:  Undefined offset: 1 in /Users/cpecken1/Documents/websites/timmygelles/web/wp/wp-admin/includes/dashboard.php on line 1160
+[13-Apr-2017 13:56:20 UTC] PHP Stack trace:
+[13-Apr-2017 13:56:20 UTC] PHP   1. {main}() /Users/cpecken1/Documents/websites/timmygelles/web/wp/wp-admin/admin-ajax.php:0
+[13-Apr-2017 13:56:20 UTC] PHP   2. do_action() /Users/cpecken1/Documents/websites/timmygelles/web/wp/wp-admin/admin-ajax.php:89
+[13-Apr-2017 13:56:20 UTC] PHP   3. call_user_func_array:{/Users/cpecken1/Documents/websites/timmygelles/web/wp/wp-includes/plugin.php:525}() /Users/cpecken1/Documents/websites/timmygelles/web/wp/wp-includes/plugin.php:525
+[13-Apr-2017 13:56:20 UTC] PHP   4. wp_ajax_dashboard_widgets() /Users/cpecken1/Documents/websites/timmygelles/web/wp/wp-includes/plugin.php:525
+[13-Apr-2017 13:56:20 UTC] PHP   5. wp_dashboard_primary() /Users/cpecken1/Documents/websites/timmygelles/web/wp/wp-admin/includes/ajax-actions.php:315
+[13-Apr-2017 13:56:20 UTC] PHP   6. wp_dashboard_cached_rss_widget() /Users/cpecken1/Documents/websites/timmygelles/web/wp/wp-admin/includes/dashboard.php:1105
+[13-Apr-2017 13:56:20 UTC] PHP   7. call_user_func_array:{/Users/cpecken1/Documents/websites/timmygelles/web/wp/wp-admin/includes/dashboard.php:935}() /Users/cpecken1/Documents/websites/timmygelles/web/wp/wp-admin/includes/dashboard.php:935
+[13-Apr-2017 13:56:20 UTC] PHP   8. wp_dashboard_primary_output() /Users/cpecken1/Documents/websites/timmygelles/web/wp/wp-admin/includes/dashboard.php:935
+[13-Apr-2017 13:56:20 UTC] PHP   9. wp_dashboard_plugins_output() /Users/cpecken1/Documents/websites/timmygelles/web/wp/wp-admin/includes/dashboard.php:1121

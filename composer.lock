@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee1d2cdaba410a072c65c078ad2f9148",
+    "content-hash": "5ae27df02c52a471ecd13f775aa5cec6",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.25",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e"
+                "reference": "d78064c68299743e0161004f2de3a0204e33b804"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
-                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d78064c68299743e0161004f2de3a0204e33b804",
+                "reference": "d78064c68299743e0161004f2de3a0204e33b804",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "1.0"
+                "composer-plugin-api": "^1.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
@@ -64,21 +64,26 @@
                 "MODX Evo",
                 "Mautic",
                 "OXID",
+                "Plentymarkets",
+                "RadPHP",
                 "SMF",
                 "Thelia",
                 "WolfCMS",
                 "agl",
                 "aimeos",
                 "annotatecms",
+                "attogram",
                 "bitrix",
                 "cakephp",
                 "chef",
+                "cockpit",
                 "codeigniter",
                 "concrete5",
                 "croogo",
                 "dokuwiki",
                 "drupal",
                 "elgg",
+                "expressionengine",
                 "fuelphp",
                 "grav",
                 "installer",
@@ -95,16 +100,18 @@
                 "piwik",
                 "ppi",
                 "puppet",
+                "reindex",
                 "roundcube",
                 "shopware",
                 "silverstripe",
                 "symfony",
                 "typo3",
                 "wordpress",
+                "yawik",
                 "zend",
                 "zikula"
             ],
-            "time": "2016-04-13T19:46:30+00:00"
+            "time": "2016-08-13T20:53:52+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -197,7 +204,7 @@
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "1.0"
+                "composer-plugin-api": "^1.0"
             },
             "conflict": {
                 "composer/installers": "<1.0.6"
@@ -373,7 +380,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/a3-lazy-load.zip",
+                "url": "https://downloads.wordpress.org/plugin/a3-lazy-load.zip?timestamp=1460706127",
                 "reference": "trunk",
                 "shasum": null
             },
@@ -413,7 +420,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.4"
+        "php": ">=5.6"
     },
     "platform-dev": []
 }
